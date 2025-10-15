@@ -1,0 +1,27 @@
+    {
+      "name": "qa-automation",
+      "version": "1.0.0",
+      "description": "Automation framework using Playwright with BDD Cucumber.",
+      "main": "index.js",
+      "scripts": {
+        "test": "npx cucumber-js"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/AnuAMohan/QA-Automation.git"
+      },
+      "keywords": [],
+      "author": "",
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/AnuAMohan/QA-Automation/issues"
+      },
+      "homepage": "https://github.com/AnuAMohan/QA-Automation#readme",
+      "devDependencies": {
+        "@cucumber/cucumber": "^12.2.0",
+        "@playwright/test": "^1.56.0",
+        "@types/node": "^24.7.2",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.9.3"
+      }
+    }
