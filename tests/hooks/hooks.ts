@@ -2,6 +2,8 @@ import { Before, AfterStep, After, setDefaultTimeout } from '@cucumber/cucumber'
 import { Browser, BrowserContext, Page, chromium } from 'playwright';
 import { setWorldConstructor, World } from '@cucumber/cucumber';
 import { CommonActions } from '../utils/commonActions';
+import { LoginPage } from '../pages/loginPage';
+import { ProductPage } from '../pages/productPage';
 
 setDefaultTimeout(100 * 1000);
 class CustomWorld extends World {
@@ -10,6 +12,8 @@ class CustomWorld extends World {
   page!: Page;
 
   common!: CommonActions;
+  loginPage!: LoginPage;
+  productPage!: ProductPage;
 
  /**
  * Initialises the Playwright browser, context, and page instances for test execution.
@@ -26,6 +30,8 @@ class CustomWorld extends World {
     this.page = await this.context.newPage()
 
     this.common = new CommonActions(this.page);
+    this.loginPage = new LoginPage(this.page);
+    this.productPage = new ProductPage(this.page);
   }
 
   /**
