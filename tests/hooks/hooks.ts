@@ -20,7 +20,7 @@ class CustomWorld extends World {
  */
   async initBrowser() {
     this.browser = await chromium.launch({
-      headless: false,
+      headless: true,
       channel: 'chrome',
       args: ["--start-maximized"],
     })
